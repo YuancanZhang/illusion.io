@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import Button from "@mui/material/Button";
 import { FC } from "react";
 
@@ -9,6 +10,9 @@ const MainView: FC<MainViewProps> = () => {
   };
   return (
     <>
+      <Grid container spacing={1} >
+        
+      </Grid>
       <Button variant="contained" onClick={() => handleClick()}>
         Hello World
       </Button>
