@@ -5,3 +5,5 @@ export enum PagePath {
 }
 
 export const PATH_STRING = ["/", "workshop", "aboutme"];
+
+export const BE_API_URL = 'http://localhost:8080'
