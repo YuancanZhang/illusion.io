@@ -1,5 +1,6 @@
 package com.example.illusion.controller;
 
+import com.example.illusion.model.imageCreateModel;
 import jakarta.persistence.EntityNotFoundException;
 import com.example.illusion.model.Images;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,14 +25,14 @@ public class ImagesController {
 
     @RequestMapping(value = "/addImage", method = RequestMethod.POST)
     public Images addImage(
-            @RequestParam String imageUrl,
-            @RequestParam String imageName
-    ) {
-        Images images = new Images();
-        images.setImageUrl(imageUrl);
-        images.setName(imageName);
-        imagesRepository.save(images);
-        return images;
+            @RequestBody imageCreateModel image
+            ) {
+        Images newImage = new Images();
+        newImage.setName(image.getName());
+        newImage.setDescription(image.getDescription());
+        newImage.setImageUrl(image.getImageUrl());
+        imagesRepository.save(newImage);
+        return newImage;
     }
 
     @RequestMapping(value = "/healthCheck", method = RequestMethod.GET)
