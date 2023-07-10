@@ -1,5 +1,5 @@
 # Getting start with Illusion.IO
-Inspired by brainfart, I don't know what this project is for or heading towards, anyway try spinning up this on local to see some weird shit happening.
+Random stuff
 
 ## Available Scripts
 
