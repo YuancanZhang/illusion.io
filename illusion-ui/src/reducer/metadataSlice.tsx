@@ -21,24 +21,24 @@ const metadataSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(fetchImageList.pending, (state, action: any) => {
-      state.status['fetchImage'] = "pending";
+      state.status["fetchImage"] = "pending";
     });
     builder.addCase(fetchImageList.fulfilled, (state, action: any) => {
-      state.imageList = action.payload
-      state.status['fetchImage'] = "succeed";
+      state.imageList = action.payload;
+      state.status["fetchImage"] = "succeed";
     });
     builder.addCase(fetchImageList.rejected, (state, action: any) => {
-      state.status['fetchImage'] = "failed";
+      state.status["fetchImage"] = "failed";
     });
     builder.addCase(addImage.pending, (state, action: any) => {
-      state.status['addImage'] = "pending";
+      state.status["addImage"] = "pending";
     });
     builder.addCase(addImage.fulfilled, (state, action: any) => {
-      state.status['addImage'] = "succeed";
+      state.status["addImage"] = "succeed";
       console.log("creation succeeded");
     });
     builder.addCase(addImage.rejected, (state, action: any) => {
-      state.status['addImage'] = "failed";
+      state.status["addImage"] = "failed";
     });
   },
 });

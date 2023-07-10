@@ -18,7 +18,7 @@ const AboutMe: FC<AboutMeProps> = () => {
           LinkedIn
         </Link>
         .
-        <Typography variant="caption" display='block' gutterBottom>
+        <Typography variant="caption" display="block" gutterBottom>
           Yuancan Zhang
         </Typography>
       </Typography>
